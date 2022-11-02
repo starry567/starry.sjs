@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>花落谁家</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<h3>你要相信接下来会有始料不及的运气！</h3>
+	</div>
+	<div>
+		<table>
+			<tr>
+				<th>花落谁家</th>
+			</tr>
+			<tr>
+				<td id="first">在0-100内产生一个数</td>
+				<td><button onclick="num()">creat</button></td>
+			</tr>
+				<script type="text/javascript">
+					function num(){
+						document.getElementById("number").innerHTML="the number is "+Math.floor(Math.random()*100+1);
+					}
+				</script>
+			<tr>
+				<td id="second">产生自定义数</td>
+				<td><button onclick="num2()">creat</button></td>
+			</tr>	
+				<script type="text/javascript">
+					function num2(){
+						var sum1=prompt('大于');
+						var sum2=prompt('小于');
+						var sum3=Math.floor(Math.random()*1000+1);                                         
+						var sum4=sum2-sum1-1;
+						var sum5=sum3%sum4;
+						//(sum3%sum4)+sum1+1
+						document.getElementById("number").innerHTML="the number is "+ sum5+ sum1+ 1;
+					}
+				</script>
+		</table>
+	</div>
+	<div id="produce">
+		<p id="number">
+			result:
+		</p>
+		
+	</div>
+</body>
+</html>
